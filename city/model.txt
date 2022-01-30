@@ -1,0 +1,16 @@
+#medium
+SOLID    WALL        1.5     25    2   AUTO    300    UNKNOWN    0   FRONT S_walls.stl
+SOLID    INSULATOR   0.035   25    2   AUTO    300    UNKNOWN    0   FRONT S_insulator.stl
+SOLID    BALCONIES   16      25    2   AUTO    300    UNKNOWN    0   FRONT S_balconies.stl
+SOLID    GLAZING     0.9     25    2   AUTO    300    UNKNOWN    0   FRONT S_glazing.stl
+SOLID    GROUND      1       25    2   AUTO    300    UNKNOWN    0   FRONT S_ground.stl
+SOLID    LAKE        0.8     25    2   AUTO    300    UNKNOWN    0   FRONT S_lake.stl
+
+
+#boundary conditions
+H_BOUNDARY_FOR_SOLID EXTERNAL      0.9   0.2   10    273   B_external_walls.stl
+H_BOUNDARY_FOR_SOLID INTERNAL      0.9   0     10    293   B_internal_walls.stl
+H_BOUNDARY_FOR_SOLID GROUNDTOP     0.9   0.1   10    273   B_ground_top.stl
+H_BOUNDARY_FOR_SOLID GROUNDSIDE    0.9   0.1   0     273   B_ground_side.stl
+T_BOUNDARY_FOR_SOLID GROUNDBOTTOM                    286   B_ground_bottom.stl
+H_BOUNDARY_FOR_SOLID LAKETOP       0.9   0.6   10    273   B_lake_top.stl
